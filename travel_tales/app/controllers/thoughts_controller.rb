@@ -11,8 +11,8 @@ class ThoughtsController < ApplicationController
   end
   def create
     @location = Location.find(params[:location_id])
-    @thought = Thought.create!(thought_params)
-    redirect_to location_path(@thought)
+    @thought = Thought.create!(thought_params.merge(location: @location))
+    redirect_to @location
   end
   def edit
     @location = Location.find(params[:location_id])
