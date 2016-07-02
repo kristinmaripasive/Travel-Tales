@@ -3,13 +3,14 @@ class ThoughtsController < ApplicationController
     @thoughts = Thought.all
   end
   def show
-    @thought = Thought.all
+    @thought = Thought.find(params[:id])
   end
   def new
     @thought = Thought.new
   end
   def create
     @thought = Thought.create!(thought_params)
+    redirect_to @thought
   end
 
 private

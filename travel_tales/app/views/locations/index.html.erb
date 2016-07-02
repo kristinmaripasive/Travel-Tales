@@ -5,3 +5,15 @@
 <% end %>
 
 <%= link_to "Add location", new_location_path(@location) %>
+
+<ul>
+  <% @locations.each do |location| %>
+    <li>
+      <p>
+      <%= link_to location.name, location %> | <%= link_to 'Edit', edit_location_path(location) %> | <%= link_to 'Delete', location_path(location),
+                                              method: :delete,
+                                              data: { confirm: 'Are you sure?' } %>
+      </p>
+    </li>
+  <% end %>
+</ul>
