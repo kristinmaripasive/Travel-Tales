@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root to: "locations#index"
+  root to: "main#index"
+  resources :main, only: :index
   resources :locations
   resources :thoughts
 end
