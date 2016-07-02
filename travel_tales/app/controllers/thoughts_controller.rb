@@ -6,11 +6,28 @@ class ThoughtsController < ApplicationController
     @thought = Thought.find(params[:id])
   end
   def new
+    @location = Location.find(params[:location_id])
     @thought = Thought.new
   end
   def create
+    @location = Location.find(params[:location_id])
     @thought = Thought.create!(thought_params)
-    redirect_to @thought
+    redirect_to location_path(@thought)
+  end
+  def edit
+    @location = Location.find(params[:location_id])
+    @thought = Thought.find(params[:id])
+  end
+  def update
+    @thought = Thought.find(params[:id])
+    @thought.update(thought_params)
+    redirect_to @thought.location
+  end
+  def destroy
+    @location = Location.find(params[:location_id])
+    @thought = Thought.find(params[:id])
+    @thought.destroy
+    redirect_to location_path(@location)
   end
 
 private

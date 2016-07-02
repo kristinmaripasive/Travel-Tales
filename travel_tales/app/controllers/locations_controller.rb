@@ -7,8 +7,7 @@ class LocationsController < ApplicationController
   end
   def create
   @location = Location.create!(location_params)
-
-  redirect_to @location
+  redirect_to locations_path(@location)
 end
   def show
     @location = Location.find(params[:id])

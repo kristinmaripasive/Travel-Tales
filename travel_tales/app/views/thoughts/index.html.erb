@@ -1,7 +1,12 @@
 <h1>Thoughts</h1>
 
+
 <% @thoughts.each do |thought| %>
   <h2><%= thought.title %></h2>
   <p><%= thought.author %></p>
   <p><%= thought.body %></p>
+  <p><%= link_to 'Edit thought', edit_location_thought_path(@location, thought) %> |
+  <%= link_to 'Delete', location_thought_path(thought),
+                                          method: :delete,
+                                          data: { confirm: 'Are you sure?' } %></p>
 <% end %>

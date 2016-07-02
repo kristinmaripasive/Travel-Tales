@@ -1,2 +1,14 @@
 <h1><%= @location.name %></h1>
-<%= link_to "Add thought", new_thought_path(@location) %>
+<%= link_to "Add thought", new_location_thought_path(@location) %>
+
+<ul>
+  <% @location.thoughts.each do |thought| %>
+    <li>
+      <%= thought.title %>
+      <%= thought.author %>
+      <%= thought.body %>
+      <%= link_to "Edit", edit_location_thought_path(@location, thought) %>
+      <%= link_to "Delete", location_thought_path(@location, thought), method: :delete, data: { confirm: 'Are you sure?' } %>
+    </li>
+  <% end %>
+</ul>
