@@ -61,21 +61,29 @@ body {
   background-color: #E7F4FF;
 }
 
-.title {
-  display: block;
-  margin: 100px auto;
-
+.container {
+  margin: 0px auto 100px auto;
+  overflow: hidden;
 }
 
-.title h1 {
-  font-family: 'Rock Salt', cursive;
-  font-size: 100px;
+.title {
+  display: block;
   text-align: center;
   color: #282C34;
   border: 3px dashed #282C34;
-  margin: auto 200px;
-  background-color: RGBA(246, 246, 246, 0.7);
+  margin: 100px 200px;
+  background-color: RGBA(246, 246, 246, 0.9);
   border-radius: 20%
+}
+
+#travel {
+  font-family: 'Rock Salt', cursive;
+  font-size: 120px;
+}
+
+#track {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 45px;
 }
 
 .nav h2{

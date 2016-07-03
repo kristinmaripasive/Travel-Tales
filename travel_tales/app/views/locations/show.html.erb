@@ -3,6 +3,8 @@
 <%= link_to "Add thought", new_location_thought_path(@location) %>
 </div>
 
+
+
 <ul>
   <% @location.thoughts.each do |thought| %>
     <div class="container-thought">
@@ -11,7 +13,7 @@
           <p>Title: <%= thought.title %> <br />
             By: <%= thought.author %></p>
             <br />
-          <p><%= thought.body %>/<p>
+          <p><%= thought.body %><p>
         </div>
         <div class="edit-container">
           <%= link_to "Edit", edit_location_thought_path(@location, thought), class: "edit" %> |
@@ -21,5 +23,6 @@
     </div>
   <% end %>
 </ul>
+
 
 <h2><%= link_to "Back to locations", locations_path, class: "link" %></h2>

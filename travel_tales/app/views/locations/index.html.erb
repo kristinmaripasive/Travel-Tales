@@ -5,7 +5,7 @@
 <ul>
   <% @locations.each do |location| %>
       <h3><%= link_to location.name, location %></h3>
-      <div class="edit-container"
+      <div class="edit-container">
       <%= link_to 'Edit', edit_location_path(location), class: "edit" %> |
       <%= link_to 'Delete', location_path(location),
                                               method: :delete,

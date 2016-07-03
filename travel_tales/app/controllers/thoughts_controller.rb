@@ -2,9 +2,6 @@ class ThoughtsController < ApplicationController
   def index
     @thoughts = Thought.all
   end
-  def show
-    @thought = Thought.find(params[:id])
-  end
   def new
     @location = Location.find(params[:location_id])
     @thought = Thought.new
@@ -13,6 +10,9 @@ class ThoughtsController < ApplicationController
     @location = Location.find(params[:location_id])
     @thought = Thought.create!(thought_params.merge(location: @location))
     redirect_to @location
+  end
+  def show
+    @thought = Thought.find(params[:id])
   end
   def edit
     @location = Location.find(params[:location_id])

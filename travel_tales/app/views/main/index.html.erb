@@ -7,15 +7,20 @@
 </head>
 <body>
 
-  <div class="title">
-    <h1>Travel Tales</h1>
-  </div>
+  <div class="container">
 
-  <div class = "nav">
-    <h2><%= link_to "View Locations", locations_path, class: "link" %></h2>
-    <h2><%= link_to "Sign Up", locations_path, class: "link" %></h2>
-    <h2><%= link_to "Sign In", locations_path, class: "link" %></h2>
-  </div>
+    <div class="title">
+      <h1><span id="travel">Travel Tales</span><br /><span id="track">
+      TRACK WHERE YOU TRECK</span></h1>
+    </div>
+
+    <div class = "nav">
+      <h2><%= link_to "View Locations", locations_path, class: "link" %></h2>
+      <h2><%= link_to "Sign Up", locations_path, class: "link" %></h2>
+      <h2><%= link_to "Sign In", locations_path, class: "link" %></h2>
+    </div>
+
+</div>
 
 </body>
 </html>
