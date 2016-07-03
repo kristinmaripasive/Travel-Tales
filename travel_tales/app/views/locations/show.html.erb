@@ -1,14 +1,22 @@
 <h1><%= @location.name %></h1>
+<div class="prompt">
 <%= link_to "Add thought", new_location_thought_path(@location) %>
+</div>
 
 <ul>
   <% @location.thoughts.each do |thought| %>
-    <li>
-      <%= thought.title %>
-      <%= thought.author %>
-      <%= thought.body %>
-      <%= link_to "Edit", edit_location_thought_path(@location, thought) %>
-      <%= link_to "Delete", location_thought_path(@location, thought), method: :delete, data: { confirm: 'Are you sure?' } %>
-    </li>
+    <div class="container-thought">
+      <li>
+        <div class="thought">
+          <%= thought.title %>
+          <%= thought.author %>
+          <%= thought.body %>
+        </div>
+          <%= link_to "Edit", edit_location_thought_path(@location, thought), class: "edit-thought" %>|
+                    <%= link_to "Delete", location_thought_path(@location, thought), method: :delete, data: { confirm: 'Are you sure?' }, class: "edit-thought" %>
+      </li>
+    </div>
   <% end %>
 </ul>
+
+<h2><%= link_to "Back to locations", locations_path, class: "link" %></h2>

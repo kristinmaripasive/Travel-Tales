@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Rock+Salt);
 @import url(https://fonts.googleapis.com/css?family=Quicksand);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
 
 * {
   margin: 0;
@@ -14,13 +15,55 @@
   color: inherit;
 }
 
+input {
+    -webkit-appearance: textfield;
+    background-color: white;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    cursor: auto;
+    padding: 1px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+}
+
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    background-color: buttonface;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+}
+user agent stylesheet
+input[type="button" i], input[type="submit" i], input[type="reset" i] {
+    -webkit-appearance: push-button;
+    -webkit-user-select: none;
+    white-space: pre;
+}
+
+
 body {
   background-color: #E7F4FF;
 }
 
 .title {
   display: block;
-  margin: 150px auto;
+  margin: 100px auto;
 }
 
 .title h1 {
@@ -29,19 +72,19 @@ body {
   text-align: center;
   color: #282C34;
   border: 3px dashed #282C34;
-  margin: 200px;
+  margin: auto 200px;
 }
 
-.nav {
-  display: flex;
-  width: 100%;
+.nav h2{
+  width: 200px;
   background-color: #374AA0;
   font-family: 'Quicksand', sans-serif;
   color: white;
+  text-align: center;
+  margin: 20px auto;
 }
 
 .link {
-  flex-grow: 1;
   line-height: 50px;
   list-style-type: none;
   margin: 15px;
@@ -57,4 +100,40 @@ body {
 h1 {
   font-family: 'Open Sans', sans-serif;
   font-size: 50px;
+  margin: 20px;
+}
+
+h3 {
+  font-family: 'Oswald', sans-serif;
+  color: #282C34;
+  margin: 20px;
+  font-size: 40px;
+}
+
+ul {
+  font-family: 'Oswald', sans-serif;
+  color: #282C34;
+  margin: 30px;
+  list-style-type: none;
+}
+
+.container-thought {
+  background-color: white;
+  padding: 10px;
+  margin: 15px;
+  border: 1px solid #FF766F;
+}
+
+.thought {
+  margin: 30px;
+}
+
+.edit-thought {
+  text-align: right;
+  margin: 15px;
+  font-size: 15px;
+}
+
+.edit-thought:hover {
+  color: red;
 }
