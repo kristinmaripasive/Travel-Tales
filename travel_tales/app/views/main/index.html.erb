@@ -1,12 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Travel Tales</title>
+  <%= stylesheet_link_tag    'main', media: 'all', 'data-turbolinks-track' => true %>
 
+</head>
+<body>
 
+  <div class="title">
+    <h1>Travel Tales</h1>
+  </div>
 
-<div class="title">
-  <h1>Travel Tales</h1>
-</div>
+  <div class = "nav">
+    <h2><%= link_to "View Locations", locations_path, class: "link" %></h2>
+    <h2><%= link_to "Sign Up", locations_path, class: "link" %></h2>
+    <h2><%= link_to "Sign In", locations_path, class: "link" %></h2>
+  </div>
 
-<div class = "nav">
-  <h2><%= link_to "View Locations", locations_path, class: "link" %></h2>
-  <h2><%= link_to "Sign Up", locations_path, class: "link" %></h2>
-  <h2><%= link_to "Sign In", locations_path, class: "link" %></h2>
-</div>
+</body>
+</html>

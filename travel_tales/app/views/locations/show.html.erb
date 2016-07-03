@@ -8,9 +8,10 @@
     <div class="container-thought">
       <li>
         <div class="thought">
-          <%= thought.title %>
-          <%= thought.author %>
-          <%= thought.body %>
+          <p>Title: <%= thought.title %> <br />
+            By: <%= thought.author %></p>
+            <br />
+          <p><%= thought.body %>/<p>
         </div>
           <%= link_to "Edit", edit_location_thought_path(@location, thought), class: "edit-thought" %>|
                     <%= link_to "Delete", location_thought_path(@location, thought), method: :delete, data: { confirm: 'Are you sure?' }, class: "edit-thought" %>
