@@ -74,7 +74,7 @@ body {
   color: #282C34;
   border: 3px dashed #282C34;
   margin: auto 200px;
-  background-color: RGBA(187, 187, 187, 0.5);
+  background-color: RGBA(246, 246, 246, 0.7);
   border-radius: 20%
 }
 
@@ -137,6 +137,14 @@ ul {
   font-size: 15px;
 }
 
-.edit-thought:hover {
+.edit-container {
+  text-align: right;
+}
+
+.edit:hover {
   color: red;
+}
+
+p {
+  border: 1px solid #282C34;
 }

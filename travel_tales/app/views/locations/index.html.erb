@@ -5,11 +5,13 @@
 <ul>
   <% @locations.each do |location| %>
       <h3><%= link_to location.name, location %></h3>
-      <p><%= link_to 'Edit', edit_location_path(location) %> | <%= link_to 'Delete', location_path(location),
+      <div class="edit-container"
+      <%= link_to 'Edit', edit_location_path(location), class: "edit" %> |
+      <%= link_to 'Delete', location_path(location),
                                               method: :delete,
-                                              data: { confirm: 'Are you sure?' } %>
-      </p>
+                                              data: { confirm: 'Are you sure?' }, class: "edit" %>
 
+      </div>
   <% end %>
 </ul>
 

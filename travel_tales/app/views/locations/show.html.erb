@@ -13,8 +13,10 @@
             <br />
           <p><%= thought.body %>/<p>
         </div>
-          <%= link_to "Edit", edit_location_thought_path(@location, thought), class: "edit-thought" %>|
-                    <%= link_to "Delete", location_thought_path(@location, thought), method: :delete, data: { confirm: 'Are you sure?' }, class: "edit-thought" %>
+        <div class="edit-container">
+          <%= link_to "Edit", edit_location_thought_path(@location, thought), class: "edit" %> |
+                    <%= link_to "Delete", location_thought_path(@location, thought), method: :delete, data: { confirm: 'Are you sure?' }, class: "edit" %>
+        </div>
       </li>
     </div>
   <% end %>
