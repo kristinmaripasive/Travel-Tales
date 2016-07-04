@@ -93,6 +93,7 @@ body {
   color: white;
   text-align: center;
   margin: 20px auto;
+  font-size: 18px;
 }
 
 .link {
@@ -112,6 +113,12 @@ h1 {
   font-family: 'Open Sans', sans-serif;
   font-size: 50px;
   margin: 20px;
+}
+
+h2 {
+  font-family: 'Rock Salt', cursive;
+  font-size: 50px;
+  text-align: center;
 }
 
 h3 {
@@ -155,4 +162,23 @@ ul {
 
 p {
   border: 1px solid #282C34;
+}
+
+.alert {
+  width: 200px;
+  background-color: #374AA0;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.form {
+  width: 200px;
+  background-color: #9BF4DB;
+  font-family: 'Quicksand', sans-serif;
+  color: #282C34;
+  text-align: center;
+  margin: 20px auto;
+  padding: 50px;
 }

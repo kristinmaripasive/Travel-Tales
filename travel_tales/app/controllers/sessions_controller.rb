@@ -19,8 +19,8 @@ class SessionsController < ApplicationController
           redirect_to new_session_path
         end
       else
-        flash[:alert] = "That user doesn't exist!"
-        redirect_to new_session_path
+        flash[:alert] = "That user doesn't exist. Please sign up first below:"
+        redirect_to new_user_path
       end
     end
     def destroy
