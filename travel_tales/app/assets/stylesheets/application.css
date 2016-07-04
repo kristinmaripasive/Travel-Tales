@@ -182,3 +182,12 @@ p {
   margin: 20px auto;
   padding: 50px;
 }
+
+nav, .notice {
+  width: 100%;
+  line-height: 30px;
+  background-color: RGBA(55, 74, 160, 0.7);
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  padding-left: 20px;
+}

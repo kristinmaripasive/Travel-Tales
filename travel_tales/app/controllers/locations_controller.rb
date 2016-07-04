@@ -3,7 +3,6 @@ class LocationsController < ApplicationController
     @locations = Location.all
   end
   def new
-    redirect_to root_path unless @current_user
     @location = Location.new
   end
   def create
