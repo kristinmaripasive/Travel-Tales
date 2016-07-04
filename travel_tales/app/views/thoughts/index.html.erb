@@ -1,3 +1,5 @@
+<% if @current_user %>
+
 <h1>Thoughts</h1>
 
 
@@ -12,3 +14,5 @@
 <% end %>
 
 <p><%= link_to "All thoughts", thoughts_path %></p>
+
+<% end %>
