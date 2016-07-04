@@ -6,4 +6,7 @@ Rails.application.routes.draw do
     resources :thoughts
   end
 
+  resources :users
+  resource  :session
+
 end

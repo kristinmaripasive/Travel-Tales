@@ -3,9 +3,11 @@ class LocationsController < ApplicationController
     @locations = Location.all
   end
   def new
+    redirect_to root_path unless @current_user
     @location = Location.new
   end
   def create
+  redirect_to root_path unless @current_user
   @location = Location.create!(location_params)
   redirect_to locations_path(@location)
 end
@@ -14,14 +16,17 @@ end
 
   end
   def edit
+    redirect_to root_path unless @current_user
     @location = Location.find(params[:id])
   end
   def update
+    redirect_to root_path unless @current_user
     @location = Location.find(params[:id])
     @location.update(location_params)
     redirect_to location_path(@location)
   end
   def destroy
+    redirect_to root_path unless @current_user
     @location = Location.find(params[:id])
     @location.destroy
     redirect_to locations_path
