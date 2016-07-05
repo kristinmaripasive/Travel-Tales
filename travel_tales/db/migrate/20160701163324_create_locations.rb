@@ -4,7 +4,8 @@ class CreateLocations < ActiveRecord::Migration
       t.string :name
       t.string :photo_url
       t.boolean :has_been
-      
+      t.string :description
+
       t.timestamps
     end
   end

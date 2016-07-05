@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def index
-      @users = User.all
+      @user = User.all
     end
 
     def new
@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     def create
       @user = User.create(user_params)
       session[:user_id] = @user.id
-      redirect_to users_path(@user)
+      redirect_to user_path(@user)
     end
 
     def show
@@ -27,12 +27,12 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
       redirect_to root_url unless @current_user == @user
       @user.update(user_params)
-      redirect_to users_path(@user)
+      redirect_to user_path(@user)
     end
 
     private
     def user_params
-      params.require(:user).permit(:username, :password)
+      params.require(:user).permit(:name, :username, :password)
     end
 
 end

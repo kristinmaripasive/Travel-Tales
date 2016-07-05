@@ -10,7 +10,6 @@ class SessionsController < ApplicationController
       if User.exists?(username: input_username)
         @user = User.find_by(username: input_username)
         if @user.password === params[:user][:password]
-          flash[:notice] = "You're signed in as " + @user.username
           session[:user_id] = @user.id
           cookies[:username] = @user.username
           redirect_to root_path

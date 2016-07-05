@@ -10,8 +10,10 @@
 
 <nav>
   <% if @current_user %>
-        <%= link_to "Welcome, #{@current_user.username}!", user_path(@current_user) %>
+        <%= link_to "Welcome, #{@current_user.name}!", user_path(@current_user) %>
+        <div class="out">
         <%= link_to "Sign Out", session_path, method: :delete %>
+        </div>
       <% end %>
 </nav>
   <% flash.each do |type, message| %>

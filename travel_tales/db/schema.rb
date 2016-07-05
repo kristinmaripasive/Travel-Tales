@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20160704203820) do
     t.string   "name"
     t.string   "photo_url"
     t.boolean  "has_been"
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
@@ -38,6 +39,7 @@ ActiveRecord::Schema.define(version: 20160704203820) do
   add_index "thoughts", ["location_id"], name: "index_thoughts_on_location_id", using: :btree
 
   create_table "users", force: :cascade do |t|
+    t.string   "name"
     t.string   "username"
     t.string   "password"
     t.datetime "created_at", null: false
