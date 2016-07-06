@@ -210,3 +210,8 @@ nav, .notice {
   border: 2px solid black;
 
 }
+
+.comment {
+  display: flex;
+  margin: 20px;
+}

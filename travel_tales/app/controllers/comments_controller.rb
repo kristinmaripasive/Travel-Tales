@@ -8,9 +8,14 @@ class CommentsController < ApplicationController
     @location = Location.find(params[:location_id])
     @thought = Thought.find(params[:thought_id])
     @comment = @thought.comments.create!(comment_params)
-
     redirect_to location_path @location
-
+  end
+  def destroy
+    @location = Location.find(params[:location_id])
+    @thought = @location.thoughts.first
+    @comment = @thought.comment(params[:id])
+    @comment.destroy
+    redirect_to location_path @location
   end
 
 

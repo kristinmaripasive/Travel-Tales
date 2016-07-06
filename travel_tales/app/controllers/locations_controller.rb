@@ -12,7 +12,6 @@ class LocationsController < ApplicationController
 end
   def show
     @location = Location.find(params[:id])
-
     @thought = @location.thoughts.first
     # @comment = @thought.comments.new
   end
