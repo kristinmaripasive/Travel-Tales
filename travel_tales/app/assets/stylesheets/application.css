@@ -215,3 +215,26 @@ nav, .notice {
   display: flex;
   margin: 20px;
 }
+
+.comment-box {
+  border: 1px solid #BBBBBB;
+  padding: 10px;
+  margin: 10px;
+
+}
+
+.comment-container {
+  border: 1px dashed #282C34;
+  margin: 10px;
+  padding: 10px;
+}
+
+.comment-placeholder {
+  width: 1200px;
+}
+
+.delete-comment, .submit {
+  text-align: right;
+  margin: 0px 30px;
+  font-family: 'Quicksand', sans-serif;
+}

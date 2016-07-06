@@ -1,8 +1,8 @@
 <%= form_for [@thought, @thought.comments.new], url: location_thought_comments_path(@location, @thought) do |f| %>
 
-  <%= f.label :comment %>
-  <%= f.text_area :comment_name %>
-
-  <%= f.submit %>
+<div class="comment-box">
+  <%= f.text_area :comment_name, placeholder: "Add comment...", class: "comment-placeholder" %>
+</div>
+<div class="submit"><%= f.submit %></div>
 
 <% end %>
