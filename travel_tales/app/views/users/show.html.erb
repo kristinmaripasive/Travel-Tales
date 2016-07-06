@@ -1,9 +1,13 @@
 <h2><%= @user.name %>  <%= link_to("(edit profile)", edit_user_path(@user)) if @current_user == @user %> </h2>
 
 <span id="locations">My Locations:</span>
+
   <% @user.user_locations.each do |user_location| %>
-    <%= user_location.location.name %>
+    <div class="user-locations">
+      <%= link_to user_location.location.name, location_url %>
+    </div>
   <% end %>
+
 
 <div class="nav">
   <h2><%= link_to "Home Page", main_index_path, class: "link" %>

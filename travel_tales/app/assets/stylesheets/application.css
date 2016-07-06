@@ -251,3 +251,10 @@ nav, .notice {
   font-size: 45px;
   margin-left: 50px;
 }
+
+.user-locations {
+  margin-left: 100px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  margin: 50px;
+}
