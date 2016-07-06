@@ -228,9 +228,12 @@ nav, .notice {
 }
 
 .comment-container {
-  border: 1px dashed #282C34;
+  border-top: 1px dashed #282C34;
+  border-bottom:  1px dashed #282C34;
   margin: 10px;
-  padding: 10px;
+  padding: 5px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder;
 }
 
 .comment-placeholder {
