@@ -25,7 +25,7 @@
 <%= render "form", :locals => {location: @location, thought: @thought} %>
 <% thought.comments.each do |c| %>
  <div class="comment"><%= c.comment_name %></div>
- <%= link_to "Delete", location_thought_comment_path(@comment), method: :delete, data: { confirm: 'Are you sure?' }, class: "edit" %>
+ <%= link_to "Delete", location_thought_comment_path(@location, @thought, c), method: :delete, data: { confirm: 'Are you sure?' }, class: "edit" %>
 <% end %>
 
 

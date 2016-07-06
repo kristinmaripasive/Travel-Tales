@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
   def destroy
     @location = Location.find(params[:location_id])
     @thought = @location.thoughts.first
-    @comment = @thought.comment(params[:id])
+    @comment = Comment.find(params[:id])
     @comment.destroy
     redirect_to location_path @location
   end
