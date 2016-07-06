@@ -1,6 +1,6 @@
 <h1><%= @location.name %></h1>
 <div class="prompt">
-<%= link_to "Add thought", new_location_thought_path(@location), class: "link" %>
+<%= link_to "Add thought", new_location_thought_path(@location), class: "add-location" %>
 </div>
 
 
@@ -19,6 +19,13 @@
                     <%= link_to "Delete", location_thought_path(@location, thought), method: :delete, data: { confirm: 'Are you sure?' }, class: "edit" %>
         </div>
       </li>
+
+
+
+<%= render "form", :locals => {location: @location, thought: @thought} %>
+
+
+
     </div>
   <% end %>
 </ul>

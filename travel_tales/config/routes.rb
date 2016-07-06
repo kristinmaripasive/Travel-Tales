@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   resources :main, only: [:index, :show]
 
   resources :locations do
-    resources :thoughts
+    resources :thoughts do
+      resources :comments, only: [:new, :create, :destroy]
+    end
   end
 
   resources :users

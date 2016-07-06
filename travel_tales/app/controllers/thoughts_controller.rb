@@ -27,6 +27,7 @@ class ThoughtsController < ApplicationController
     redirect_to location_path(@location)
   end
 
+
 private
   def thought_params
     params.require(:thought).permit(:title, :author, :body, :has_been)

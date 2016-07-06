@@ -13,6 +13,8 @@ end
   def show
     @location = Location.find(params[:id])
 
+    @thought = @location.thoughts.first
+    # @comment = @thought.comments.new
   end
   def edit
     redirect_to root_path unless @current_user
