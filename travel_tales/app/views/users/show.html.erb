@@ -4,8 +4,9 @@
 
   <% @user.user_locations.each do |user_location| %>
     <div class="user-locations">
-      <%= link_to user_location.location.name, location_url %>
+      <%= link_to user_location.location.name, user_location.location %>
     </div>
+
   <% end %>
 
 
