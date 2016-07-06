@@ -245,3 +245,9 @@ nav, .notice {
   margin: 0px 30px;
   font-family: 'Quicksand', sans-serif;
 }
+
+#locations {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 45px;
+  margin-left: 50px;
+}

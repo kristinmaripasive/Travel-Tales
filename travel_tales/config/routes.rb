@@ -11,4 +11,11 @@ Rails.application.routes.draw do
   resources :users
   resource  :session
 
+  resources :locations do
+    member do
+      post 'add_location'
+      delete 'remove_location'
+    end
+  end
+
 end
