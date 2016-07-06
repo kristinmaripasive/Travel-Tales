@@ -139,11 +139,15 @@ ul {
   background-color: white;
   padding: 10px;
   margin: 15px;
-  border: 1px solid #FF766F;
+  border: 5px solid #FF766F;
 }
 
 .thought {
-  margin: 30px;
+  margin: 20px;
+}
+
+.thought p {
+  padding: 20px;
 }
 
 .edit-thought {
