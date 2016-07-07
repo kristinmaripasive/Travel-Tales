@@ -5,9 +5,10 @@ A ruby application to write blogs about locations a user has been to by logging 
 1. Open your terminal
 2. Clone the repository: `$ git@github.com:kristinmaripasive/travel-tales.git`
 3. Go inside the directory: `$ cd travel_tales`
-4. Install gems needed: `$ bundle install`
-5. Load server: `$ rails s`
-6. Open page on browser: `http://localhost:3000`
+4. Checkout to branch: `git checkout treks`
+5. Install gems needed: `$ bundle install`
+6. Load server: `$ rails s`
+7. Open page on browser: `http://localhost:3000`
 
 ## Contributing
 1. Fork it!
