@@ -32,29 +32,7 @@ input {
     border-color: initial;
 }
 
-input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
-    align-items: flex-start;
-    text-align: center;
-    cursor: default;
-    color: buttontext;
-    border-image-source: initial;
-    border-image-slice: initial;
-    border-image-width: initial;
-    border-image-outset: initial;
-    border-image-repeat: initial;
-    background-color: buttonface;
-    box-sizing: border-box;
-    padding: 2px 6px 3px;
-    border-width: 2px;
-    border-style: outset;
-    border-color: buttonface;
-}
-user agent stylesheet
-input[type="button" i], input[type="submit" i], input[type="reset" i] {
-    -webkit-appearance: push-button;
-    -webkit-user-select: none;
-    white-space: pre;
-}
+
 
 
 body {
@@ -248,14 +226,14 @@ nav, .notice {
 }
 
 #locations {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 45px;
   margin-left: 50px;
 }
 
 .user-locations {
   margin-left: 100px;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 30px;
   margin: 50px;
 }

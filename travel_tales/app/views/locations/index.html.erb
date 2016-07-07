@@ -1,19 +1,20 @@
 <% if @current_user %>
+
 <h1>Locations <%= link_to "(+)", new_location_path %></h1>
 
 <ul>
-    <% @locations.each do |location| %>
-        <h3><%= link_to location.name, location %></h3>
-        <div class="edit-container">
-        <%= link_to "Add to profile (+)", add_location_location_path(location), method: :post %> | 
-        <%= link_to 'Edit', edit_location_path(location), class: "edit" %> |
-        <%= link_to 'Delete', location_path(location),
-                                                method: :delete,
-                                                data: { confirm: 'Are you sure?' }, class: "edit" %>
+  <% @locations.each do |location| %>
+    <h3><%= link_to location.name, location %></h3>
+    <div class="edit-container">
+      <%= link_to "Add to profile (+)", add_location_location_path(location), method: :post %> |
+      <%= link_to 'Edit', edit_location_path(location), class: "edit" %> |
+      <%= link_to 'Delete', location_path(location),
+      method: :delete,
+      data: { confirm: 'Are you sure?' }, class: "edit" %>
 
-        </div>
-    <% end %>
-  </ul>
+    </div>
+  <% end %>
+</ul>
 
   <div class="nav">
     <h2><%= link_to "Home Page", main_index_path, class: "link" %>
@@ -21,8 +22,8 @@
 
 <% else %>
 
-<div class="nav">
-<h2><%= link_to "Please Sign In", new_session_path, class: "link" %>
-</div>
+  <div class="nav">
+    <h2><%= link_to "Please Sign In", new_session_path, class: "link" %>
+  </div>
 
 <% end %>

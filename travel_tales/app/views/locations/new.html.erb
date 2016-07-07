@@ -1,17 +1,9 @@
 <h2>Add a location:</h2>
 <div class="form">
-<%= form_for @location do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-
-  <%= f.label :photo_url %>
-  <%= f.text_field :photo_url %>
-
-
-  <%= f.label :description %>
-  <%= f.text_area :description %>
-
+  <%= form_for @location do |f| %>
+  <%= f.label :name%>
+  <%= f.text_field :name, placeholder: "City, State"  %>
 
   <%= f.submit %>
-<% end %>
+  <% end %>
 </div>

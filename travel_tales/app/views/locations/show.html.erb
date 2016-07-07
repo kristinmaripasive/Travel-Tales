@@ -1,50 +1,41 @@
 <h1><%= @location.name %></h1>
-<div class="prompt">
-<%= link_to "Add thought", new_location_thought_path(@location), class: "add-location" %>
-</div>
 
+<div class="prompt">
+  <%= link_to "Add thought", new_location_thought_path(@location), class: "add-location" %>
+</div>
 
 <ul>
   <% @location.thoughts.each do |thought| %>
-    <div class="container-thought">
-      <li>
-        <div class="thought">
-          <p>Title: <%= thought.title %> <br />
-            By: <%= thought.author %></p>
-            <br />
-          <p><%= thought.body %></p>
+  <div class="container-thought">
+    <li>
+      <div class="thought">
+        <p>Title: <%= thought.title %> <br />
+        By: <%= thought.author %></p> <br />
+        <p><%= thought.body %></p>
+      </div>
+      <div class="edit-container">
+        <%= link_to "Edit", edit_location_thought_path(@location, thought), class: "edit" %> |
+        <%= link_to "Delete", location_thought_path(@location, thought), method: :delete, data: { confirm: 'Are you sure?' }, class: "edit" %>
+      </div>
+    </li>
+
+    <%= render "form", :locals => {location: @location, thought: @thought} %>
+
+    <% thought.comments.each do |c| %>
+      <div class="comment-container">
+        <div class="comment">
+          <%= c.comment_name %>
         </div>
-        <div class="edit-container">
-          <%= link_to "Edit", edit_location_thought_path(@location, thought), class: "edit" %> |
-                    <%= link_to "Delete", location_thought_path(@location, thought), method: :delete, data: { confirm: 'Are you sure?' }, class: "edit" %>
+        <div class="delete-comment">
+          <%= link_to "Delete", location_thought_comment_path(@location, @thought, c), method: :delete, data: { confirm: 'Are you sure?' }, class: "edit" %>
         </div>
-      </li>
-
-
-
-<%= render "form", :locals => {location: @location, thought: @thought} %>
-
-
-  <% thought.comments.each do |c| %>
-  <div class="comment-container">
-     <div class="comment">
-       <%= c.comment_name %>
-     </div>
-     <div class="delete-comment">
-     <%= link_to "Delete", location_thought_comment_path(@location, @thought, c), method: :delete, data: { confirm: 'Are you sure?' }, class: "edit" %>
-     </div>
+      </div>
+    <% end %>
   </div>
-  <% end %>
-
-
-
-
-    </div>
   <% end %>
 </ul>
 
-
-<div class = "nav">
-  <h2><%= link_to "Back to locations", locations_path, class: "link" %></h2>
-  <h2><%= link_to "Home Page", main_index_path, class: "link" %></h2>
-</div>
+  <div class = "nav">
+    <h2><%= link_to "Back to locations", locations_path, class: "link" %></h2>
+    <h2><%= link_to "Home Page", main_index_path, class: "link" %></h2>
+  </div>
