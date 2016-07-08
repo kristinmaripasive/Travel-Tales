@@ -8,6 +8,60 @@
     </div>
 
   <% end %>
+
+
+
+<script async defer
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2VjNFJ2HdQMX_dFw6XoUJFTvyjjTcU68&callback=initMap">
+   </script>
+
+   <div id="map"></div>
+       <script>
+
+         function initMap() {
+           var myLatLng = {lat: -25.363, lng: 131.044};
+
+
+
+           var locations = <%= @user.locations.map {|l| l.name}.to_json.html_safe %>
+           var mapCenter, map
+
+             locations.forEach(function(location){
+
+               convertNameToLatLong(location, function(coords){
+                 if(!mapCenter){
+                   mapCenter = coords
+                   map = new google.maps.Map(document.getElementById('map'), {
+                     zoom: 4,
+                     center: coords
+                   });
+                 }
+                 var marker = new google.maps.Marker({
+                   position: coords,
+                   map: map,
+                   title: 'Hello World!'
+                 });
+               })
+             })
+
+         }
+       </script>
+
+<script>
+
+
+function convertNameToLatLong(name, callback){
+  $.getJSON("https://maps.googleapis.com/maps/api/geocode/json?address=" + name, function(response){
+    callback(response.results[0].geometry.location);
+  })
+  // callback([lat, long])
+}
+
+</script>
+
+
+
+
 <div class = "nav">
   <h2><%= link_to "Back to locations", locations_path, class: "link" %></h2>
   <h2><%= link_to "Home Page", main_index_path, class: "link" %></h2>

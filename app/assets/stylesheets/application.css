@@ -245,3 +245,9 @@ nav, .notice {
   padding: 10px;
   background-color: #9BF4DB;
 }
+
+#map {
+  height: 500px;
+  width: 900px;
+  margin: 50px auto;
+      }
