@@ -31,7 +31,18 @@ class UsersController < ApplicationController
     redirect_to user_path(@user)
   end
 
+def remove_location
+  @user = User.find(params[:id])
+  user_location = @user.user_locations.destroy(user: @current_user)
+  redirect_to user_path(user_location.user)
+end
+
+
+
   private
+  def location_params
+    params.require(:location).permit(:name, :photo_url, :has_been)
+  end
   def user_params
     params.require(:user).permit(:name, :username, :password)
   end

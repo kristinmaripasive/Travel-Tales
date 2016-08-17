@@ -37,9 +37,7 @@ end
     user_location = @location.user_locations.create(user: @current_user)
     redirect_to user_path(user_location.user)
   end
-  def remove_location
 
-  end
 
 
 
